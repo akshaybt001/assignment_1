@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package pb;
+
+option go_package="/pb";
+
+message UserData{
+    string name=1;
+}
+
+service MockService{
+    rpc GetSomeData(UserData)returns(UserData);
+} 
